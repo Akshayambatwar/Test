@@ -2,37 +2,41 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Grid-Container {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  padding-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.Grid-Container div {
+  border: 1px solid black;
+  background-color:black
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Grid-Container div:nth-child(-n + 8):nth-child(even),
+.Grid-Container div:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+.Grid-Container div:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+.Grid-Container div:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+.Grid-Container div:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+.Grid-Container div:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+.Grid-Container div:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+.Grid-Container div:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+  background-color: white;
+}
+
+.Grid-Container div:hover{
+  background-color: red;
+}
+.Grid-Container div:nth-child(-n + 8):nth-child(even):hover,
+.Grid-Container div:nth-child(n + 8):nth-child(-n + 16):nth-child(odd):hover,
+.Grid-Container div:nth-child(n + 17):nth-child(-n + 24):nth-child(even):hover,
+.Grid-Container div:nth-child(n + 25):nth-child(-n + 32):nth-child(odd):hover,
+.Grid-Container div:nth-child(n + 33):nth-child(-n + 40):nth-child(even):hover,
+.Grid-Container div:nth-child(n + 41):nth-child(-n + 48):nth-child(odd):hover,
+.Grid-Container div:nth-child(n + 49):nth-child(-n + 56):nth-child(even):hover,
+.Grid-Container div:nth-child(n + 57):nth-child(-n + 64):nth-child(odd):hover {
+  background-color: red;
 }
